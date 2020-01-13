@@ -1,0 +1,10 @@
+@import '../../Styles/includes/colors';
+
+.section-skills {
+    padding-top: 80px;
+    background-color: rgba($white, 0.9);
+    .skills-container {
+        display: flex;
+        justify-content: space-between;
+    }
+}

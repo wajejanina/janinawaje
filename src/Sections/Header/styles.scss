@@ -1,0 +1,44 @@
+@import '../../Styles/includes/mixins';
+@import '../../Styles/includes/variables';
+@import '../../Styles/includes/colors';
+
+.section-main {
+    .header-title {
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+
+        @include when-wider-than(tablet) {
+            bottom: 60px;
+        }
+
+        @include when-wider-than(small-desktop) {
+            position: sticky;
+            top: 50%;
+            bottom: auto;
+            left: 0;
+            transform: translateY(-50%);
+        }
+    }
+
+    .navigation {
+        position: absolute;
+        left: 0;
+        top: 20px;
+
+        @include when-wider-than(tablet) {
+            top: 60px;
+        }
+
+        @include when-wider-than(small-desktop) {
+            position: sticky;
+            left: 100%;
+            top: 200px;
+        }
+
+        @include when-wider-than(large-desktop) {
+            top: 50%;
+            transform: translateY(calc(-50% - 150px));
+        }
+    }
+}

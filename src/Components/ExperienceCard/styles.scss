@@ -1,0 +1,53 @@
+@import '../../Styles/includes/mixins';
+@import '../../Styles/includes/variables';
+@import '../../Styles/includes/colors';
+
+.experience-card {
+    font-family: 'Roboto', sans-serif;
+    padding: 30px 15px;
+    background-color: $white;
+    border: 3px solid $darker-pink;
+    border-radius: 16px;
+    flex: 0 0 25%;
+
+    span {
+        display: block;
+        width: 80px;
+        height: 2px;
+        margin: 15px auto;
+        background-color: $darker-pink;
+    }
+
+    &__title, &__company, &__description {
+        text-align: center;
+        font-family: inherit;
+    }
+
+    &__title {
+        font-size: 30px;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        line-height: 1;
+        text-transform: uppercase;
+        color: $darker-pink;
+    }
+
+    &__company {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        line-height: 1;
+        color: $dark-gray-2;
+        opacity: .8;
+        margin-bottom: 10px;
+    }
+
+    &__description {
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        line-height: 1;
+        color: $dark-gray-2;
+        opacity: .6;
+        margin-bottom: 50px;
+    }
+}

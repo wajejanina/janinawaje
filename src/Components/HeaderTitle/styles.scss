@@ -1,0 +1,62 @@
+@import '../../Styles/includes/mixins';
+@import '../../Styles/includes/variables';
+@import '../../Styles/includes/colors';
+
+.header-title {
+    padding: 30px 0 0;
+    width: 80%;
+    padding-left: 10px;
+    background-color: $white;
+
+    @include when-wider-than(tablet) {
+        padding-left: 0;
+    }
+
+    @include when-wider-than(small-desktop) {
+        max-width: 340px;
+        background-color: transparent;
+    }
+
+    @include when-wider-than(large-desktop) {
+        max-width: 663px;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 80px;
+        height: 4px;
+        background-color: $black;
+        top: 0;
+        left: 10px;
+        margin-top: 10px;
+
+        @include when-wider-than(tablet) {
+            left: 0;
+        }
+    }
+
+    h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        line-height: 1.25;
+
+        @include when-wider-than(tablet) {
+            font-size: 24px;
+            letter-spacing: 0.8px;
+        }
+
+        @include when-wider-than(small-desktop) {
+            font-size: 22px;
+            letter-spacing: 1px;
+        }
+
+        @include when-wider-than(large-desktop) {
+            font-size: 30px;
+            letter-spacing: 2.5px;
+        }
+    }
+}

@@ -1,0 +1,62 @@
+@import '../includes/mixins';
+@import '../includes/variables';
+@import '../includes/colors';
+
+#root {
+    transition: filter .5s ease-out;
+
+    &.modal-open {
+        filter: blur(10px);
+    }
+}
+
+.container {
+    max-width: 1440px;
+    width: calc(100% - (#{$page-gutter-mobile} * 2));
+    margin: 0 auto;
+    position: relative;
+
+    @include when-wider-than(tablet) {
+        width: calc(100% - (#{$page-gutter-tablet} * 2));
+    }
+
+    @include when-wider-than(small-desktop) {
+        width: calc(100% - (#{$page-gutter-small-desktop} * 2));
+    }
+
+    @include when-wider-than(large-desktop) {
+        width: calc(100% - (#{$page-gutter-large-desktop} * 2));
+        max-width: 1440px;
+    }
+}
+
+.sections-container {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 60%;
+    min-height: 800px;
+
+    @include when-wider-than(small-desktop) {
+        background-position: center;
+    }
+
+    @include when-wider-than(small-desktop) {
+        background-size: contain;
+    }
+}
+
+.section {
+    min-height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+
+    &-experiences, &-works, &-skills, &-contacts {
+        overflow: hidden;
+    }
+}
+
+.ReactModal__Overlay {
+    z-index: 100;
+    background-color: transparent;
+}

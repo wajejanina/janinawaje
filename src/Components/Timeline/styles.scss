@@ -1,0 +1,65 @@
+@import '../../Styles/includes/mixins';
+@import '../../Styles/includes/variables';
+@import '../../Styles/includes/colors';
+
+.timeline {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    position: relative;
+    margin: 0 auto;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 3px;
+        width: 100%;
+        background-color: $darker-pink;
+    }
+
+    &__period {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        flex: 0 0 20px;
+        background-color: $pink;
+        border: 3px solid $darker-pink;
+        border-radius: 50%;
+
+        &__date {
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            line-height: 1;
+            color: $dark-gray-2;
+            opacity: .8;
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: max-content;
+        }
+    }
+
+    svg {
+        position: absolute;
+        width: 50px !important;
+        height: 50px !important;
+        padding: 30px;
+        color: $white;
+        background: $dark-gray-2;
+        border-radius: 50%;
+        &:first-of-type {
+            left: 25%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &:last-of-type {
+            right: 25%;
+            top: 50%;
+            transform: translate(50%, -50%);
+        }
+    }
+}

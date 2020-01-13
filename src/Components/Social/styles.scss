@@ -1,0 +1,21 @@
+@import '../../Styles/includes/colors';
+
+.social {
+    background-color: $darker-pink;
+    border-radius: 50%;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    padding: 5px;
+    color: white;
+
+    &:not(:last-of-type) {
+        margin-right: 20px;
+    }
+
+    svg {
+        width: 24px !important;
+        height: 24px !important;
+        color: white;
+    }
+}

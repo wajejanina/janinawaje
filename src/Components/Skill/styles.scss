@@ -1,0 +1,47 @@
+@import '../../Styles/includes/mixins';
+@import '../../Styles/includes/variables';
+@import '../../Styles/includes/colors';
+
+.skill {
+    position: relative;
+    margin-bottom: 20px;
+
+    &__icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+    }
+
+    &__name {
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        line-height: 1;
+        color: $dark-gray-2;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__rate {
+        width: 300px;
+        justify-content: space-between;
+        display: inline-flex;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__dot {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: $gray;
+
+        &--filled {
+            background-color: $dark-pink;
+        }
+    }
+}
