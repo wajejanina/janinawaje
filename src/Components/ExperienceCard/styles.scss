@@ -9,6 +9,7 @@
     border: 3px solid $darker-pink;
     border-radius: 16px;
     flex: 0 0 25%;
+    margin-bottom: 20px;
 
     span {
         display: block;
@@ -18,7 +19,7 @@
         background-color: $darker-pink;
     }
 
-    &__title, &__company, &__description {
+    &__title, &__company, &__description, &__period {
         text-align: center;
         font-family: inherit;
     }
@@ -48,6 +49,24 @@
         line-height: 1;
         color: $dark-gray-2;
         opacity: .6;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
+
+        @include when-wider-than(tablet) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__period {
+        text-align: center;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        line-height: 1;
+        font-style: italic;
+        opacity: 0.8;
+
+        @include when-wider-than(tablet) {
+            display: none;
+        }
     }
 }

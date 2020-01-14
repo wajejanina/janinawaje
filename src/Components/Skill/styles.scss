@@ -7,14 +7,20 @@
     margin-bottom: 20px;
 
     &__icon {
-        width: 40px;
-        height: 40px;
-        margin-right: 20px;
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+
+        @include when-wider-than(tablet) {
+            width: 40px;
+            height: 40px;
+            margin-right: 20px;
+        }
     }
 
     &__name {
         font-family: 'Roboto', sans-serif;
-        font-size: 20px;
+        font-size: 16px;
         letter-spacing: 0.5px;
         font-weight: 500;
         line-height: 1;
@@ -22,26 +28,65 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+
+        @include when-wider-than(tablet) {
+            font-size: 20px;
+        }
+
+        @include when-wider-than(small-desktop) {
+            font-size: 16px;
+        }
+
+        @include when-wider-than(large-desktop) {
+            font-size: 20px;
+        }
     }
 
     &__rate {
-        width: 300px;
+        width: 160px;
         justify-content: space-between;
         display: inline-flex;
         position: absolute;
         right: 0;
         top: 50%;
         transform: translateY(-50%);
+
+        @include when-wider-than(tablet) {
+            width: 300px;
+        }
+
+        @include when-wider-than(small-desktop) {
+            width: 180px;
+        }
+
+        @include when-wider-than(large-desktop) {
+            width: 300px;
+        }
     }
 
     &__dot {
-        width: 15px;
-        height: 15px;
+        width: 10px;
+        height: 10px;
         border-radius: 50%;
         background-color: $gray;
 
         &--filled {
             background-color: $dark-pink;
+        }
+
+        @include when-wider-than(small-desktop) {
+            width: 15px;
+            height: 15px;
+        }
+
+        @include when-wider-than(small-desktop) {
+            width: 10px;
+            height: 10px;
+        }
+
+        @include when-wider-than(large-desktop) {
+            width: 15px;
+            height: 15px;
         }
     }
 }

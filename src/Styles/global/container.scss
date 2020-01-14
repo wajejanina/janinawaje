@@ -6,7 +6,9 @@
     transition: filter .5s ease-out;
 
     &.modal-open {
-        filter: blur(10px);
+        @include when-wider-than(small-desktop) {
+            filter: blur(10px);
+        }
     }
 }
 

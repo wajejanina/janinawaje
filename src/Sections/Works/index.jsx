@@ -7,19 +7,6 @@ import WorksCollection from 'Components/WorksCollection'
 
 import './styles.scss'
 
-const customStyles = {
-    content : {
-      top                   : '50%',
-      left                  : '50%',
-      right                 : 'auto',
-      bottom                : 'auto',
-      marginRight           : '-50%',
-      transform             : 'translate(-50%, -50%)',
-      width                 : '80%',
-      height                : '80%',
-    }
-};
-
 Modal.setAppElement('#root')
 
 const Works = ({ works }) => {
@@ -38,19 +25,20 @@ const Works = ({ works }) => {
 
     return (
         <Fragment>
-            <section id="works" className="container section section-works">
-                <h2>WORK</h2>
-                <div className="works-collections-container">
-                    {
-                        works.map((work, i) => <WorksCollection openModal={openModal} key={i} {...work} />)
-                    }
+            <section id="works" className="section section-works">
+                <div className="container">
+                    <h2>WORK</h2>
+                    <div className="works-collections-container">
+                        {
+                            works.map((work, i) => <WorksCollection openModal={openModal} key={i} {...work} />)
+                        }
+                    </div>
                 </div>
             </section>
             <Modal
                 className="works-modal"
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
-                style={customStyles}
                 contentLabel="Example Modal">
                     <button className="works-modal__close" onClick={closeModal}>X</button>
                     <div className="works-modal__content">

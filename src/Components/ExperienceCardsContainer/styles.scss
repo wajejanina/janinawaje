@@ -1,4 +1,9 @@
+@import '../../Styles/includes/mixins';
+@import '../../Styles/includes/variables';
+
 .experience-cards-container {
-    display: flex;
-    justify-content: space-between;
+    @include when-wider-than(tablet) {
+        display: flex;
+        justify-content: space-between;
+    }
 }

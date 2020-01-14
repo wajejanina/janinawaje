@@ -8,11 +8,8 @@
     padding-left: 10px;
     background-color: $white;
 
-    @include when-wider-than(tablet) {
-        padding-left: 0;
-    }
-
     @include when-wider-than(small-desktop) {
+        padding-left: 0;
         max-width: 340px;
         background-color: transparent;
     }
@@ -32,7 +29,7 @@
         left: 10px;
         margin-top: 10px;
 
-        @include when-wider-than(tablet) {
+        @include when-wider-than(small-desktop) {
             left: 0;
         }
     }

@@ -7,6 +7,7 @@
     flex-direction: column;
     width: 200px;
     background-color: $white;
+    padding-left: 10px;
 
     @include when-wider-than(small-desktop) {
         align-items: flex-end;
@@ -22,13 +23,13 @@
         margin: 5px 0;
         background-color: transparent;
         border: none;
-        text-decoration: none;
         display: block;
         text-transform: uppercase;
         cursor: pointer;
         color: $black;
         opacity: .6;
         transition: opacity .3s ease-out;
+        text-decoration: underline;
 
         &:hover {
             opacity: 1;
@@ -37,6 +38,7 @@
         @include when-wider-than(tablet) {
             font-size: 26px;
             letter-spacing: 1.5px;
+            text-decoration: none;
         }
 
         @include when-wider-than(small-desktop) {

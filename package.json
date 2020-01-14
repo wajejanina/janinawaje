@@ -1,11 +1,13 @@
 {
   "name": "janinawaje",
+  "homepage": "https://jethrocabaluna.github.io/janinawaje",
   "version": "1.0.0",
   "description": "Janina Waje Online Portfolio",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode development"
+    "build": "webpack --mode development",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Jethro Cabaluna",
   "license": "ISC",

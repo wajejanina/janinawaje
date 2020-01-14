@@ -1,10 +1,14 @@
+@import '../../Styles/includes/mixins';
+@import '../../Styles/includes/variables';
 @import '../../Styles/includes/colors';
 
 .section-skills {
     padding-top: 80px;
     background-color: rgba($white, 0.9);
     .skills-container {
-        display: flex;
-        justify-content: space-between;
+        @include when-wider-than(small-desktop) {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 }

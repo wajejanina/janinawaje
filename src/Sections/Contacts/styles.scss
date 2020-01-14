@@ -5,7 +5,8 @@
     background-color: rgba($white, 0.9);
 
     .contact-container {
-        width: 420px;
+        width: 100%;
+        max-width: 420px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -46,9 +47,14 @@
                     width: 100%;
                     padding: 15px 10px;
                     border-radius: 6px;
+                    box-sizing: border-box;
 
                     &::placeholder {
                         color: $gray;
+                    }
+
+                    &:focus {
+                        outline: none;
                     }
                 }
             }
@@ -64,9 +70,14 @@
                     width: 100%;
                     height: 100px;
                     padding: 15px 10px;
+                    box-sizing: border-box;
 
                     &::placeholder {
                         color: $gray;
+                    }
+
+                    &:focus {
+                        outline: none;
                     }
                 }
             }
