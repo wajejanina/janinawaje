@@ -5,7 +5,7 @@
 .section-main {
     .header-title {
         position: absolute;
-        bottom: 40px;
+        bottom: 80px;
         left: 0;
 
         @include when-wider-than(tablet) {

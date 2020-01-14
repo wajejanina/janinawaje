@@ -38,13 +38,12 @@
     background-size: cover;
     background-position: 60%;
     min-height: 800px;
+    height: 100vh;
 
     @include when-wider-than(small-desktop) {
         background-position: center;
-    }
-
-    @include when-wider-than(small-desktop) {
         background-size: contain;
+        height: auto;
     }
 }
 
