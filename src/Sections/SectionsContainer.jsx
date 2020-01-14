@@ -19,7 +19,7 @@ const SectionsContainer = ({ data }) => {
     } else if (data.error) {
         return <ErrorPage />
     }
-    console.log(data)
+
     return (
         <main className="sections-container" style={{ backgroundImage: `url(${data.pageSettings[0].pageBackground.url})` }}>
             <Header title={get(data, 'pageSettings[0].pageHeaderTitle')} />
