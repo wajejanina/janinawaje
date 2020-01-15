@@ -35,10 +35,15 @@
 .sections-container {
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 60%;
+    background-size: 270%;
+    background-position: 70% 100px;
     min-height: 800px;
     height: 100vh;
+
+    @include when-wider-than(tablet) {
+        background-size: cover;
+        background-position: 60%;
+    }
 
     @include when-wider-than(small-desktop) {
         background-position: center;

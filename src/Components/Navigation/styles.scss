@@ -6,22 +6,16 @@
     display: flex;
     flex-direction: column;
     width: 200px;
-    background-color: $white;
+    align-items: flex-end;
     padding-left: 10px;
-
-    @include when-wider-than(small-desktop) {
-        align-items: flex-end;
-        background-color: transparent;
-    }
 
     a {
         font-family: 'Poppins', sans-serif;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: bold;
         letter-spacing: 1.5px;
         line-height: 1;
         margin: 5px 0;
-        background-color: transparent;
         border: none;
         display: block;
         text-transform: uppercase;

@@ -8,9 +8,11 @@ import Navigation from 'Components/Navigation'
 import './styles.scss'
 
 const Header = ({ title }) =>  (
-    <section className="container section section-main">
-        <HeaderTitle title={title} />
-        <Navigation sections={sections} />
+    <section className="section section-main">
+        <div className="container">
+            <HeaderTitle title={title} />
+            <Navigation sections={sections} />
+        </div>
     </section>
 )
 

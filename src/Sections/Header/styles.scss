@@ -3,6 +3,17 @@
 @import '../../Styles/includes/colors';
 
 .section-main {
+    height: 100vh;
+    background-color: rgba($white, 0.6);
+
+    @include when-wider-than(small-desktop) {
+        background-color: transparent;
+    }
+
+    .container {
+        height: 100%;
+    }
+
     .header-title {
         position: absolute;
         bottom: 80px;
@@ -22,17 +33,23 @@
     }
 
     .navigation {
-        position: absolute;
-        left: 0;
+        position: sticky;
+        left: 100%;
         top: 20px;
+        margin-bottom: 200px;
 
         @include when-wider-than(tablet) {
+            position: absolute;
+            right: 0;
             top: 60px;
+            left: auto;
+            margin-bottom: 0;
         }
 
         @include when-wider-than(small-desktop) {
             position: sticky;
             left: 100%;
+            right: auto;
             top: 200px;
         }
 
